@@ -1,0 +1,15 @@
+@import "./settings";
+
+// components
+@import "./components/navigation";
+@import "./components/socialNetwork";
+@import "./components/buttons";
+@import "./components/logo";
+@import "./components/mouse";
+@import "./components/dynamicText";
+
+// pages
+@import "./pages/contact";
+@import "./pages/project";
+@import "./pages/home";
+@import "./pages/notFound";
