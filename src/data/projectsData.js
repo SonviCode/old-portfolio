@@ -1,12 +1,12 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Casta",
-    date: "Janvier 2020",
-    languages: ["React", "Php", "Sass"],
+    title: "Manage Landing Page",
+    date: "Aout 2022",
+    languages: ["HTML", "Sass", "Javascript"],
     infos:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas cumque labore suscipit, pariatur laboriosam autem omnis saepe quisquam enim iste.",
-    img: "./assets/img/projet-2.jpg",
+      "Site réalisé à partir d'une maquette PNG, reçu grâce à FrontEnd Mentor. Codé entièrement en vanilla (sans framework). utilisation de GSAP et de Swiper.JS",
+    img: "./assets/img/manage-preview.jpg",
     link: "http://www.google.com",
   },
   {

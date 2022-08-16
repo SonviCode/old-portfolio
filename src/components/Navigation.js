@@ -3,7 +3,7 @@ import {NavLink} from "react-router-dom";
 
 const Navigation = () => {
     return (
-        <div className='navigation'>
+        <nav className='navigation'>
             <ul>
                 <NavLink to="/" className={(nav) => (nav.isActive) ? "nav-active hover" : "hover"}>
                     <li>Accueil</li>
@@ -16,7 +16,7 @@ const Navigation = () => {
                 </NavLink>
             </ul>
             
-        </div>
+        </nav>
     );
 };
 

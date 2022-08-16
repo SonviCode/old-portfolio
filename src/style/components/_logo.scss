@@ -4,6 +4,10 @@
   font-size: 1.2rem;
   user-select: none;
 
+  span {
+    color: $color-4;
+  }
+
   &:after {
     content: "";
     height: 24px;

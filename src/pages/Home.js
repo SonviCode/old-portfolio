@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonsNav from "../components/ButtonsNav";
 import DynamicText from "../components/DynamicText";
 import Mouse from "../components/Mouse";
 import Navigation from "../components/Navigation";
@@ -20,6 +21,7 @@ const Home = () => {
             <h2><DynamicText /></h2>
           </div>
         </div>
+        <ButtonsNav right={"/projet"}/>
       </div>
     </div>
   );
