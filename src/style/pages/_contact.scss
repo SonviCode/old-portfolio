@@ -2,6 +2,7 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
 
   &:after {
     content: "";
@@ -63,7 +64,7 @@
         content: "";
         height: 70px;
         width: 70px;
-        border: 1px $color-2 solid;
+        border: 1px $blue-light solid;
         border-radius: 50%;
         position: absolute;
         top: -22px;
@@ -80,7 +81,7 @@
         background: none;
         font-family: $font-1;
         font-size: 1.2rem;
-        border-bottom: 1px solid $color-2;
+        border-bottom: 1px solid $blue-light;
         border-radius: 5px;
 
         @media screen and (min-width: 1200px) {

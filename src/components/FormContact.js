@@ -1,11 +1,60 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from "@emailjs/browser"
 
 const FormContact = () => {
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+      e.preventDefault();
+      const formMess = document.querySelector('.form-message');
+  
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_SERVICE,
+          process.env.REACT_APP_TEMPLATES,
+          form.current,
+          process.env.REACT_APP_KEY,
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            form.current.reset();
+            formMess.innerHTML = "<p class='sucess'>Message envoyé !</p>";
+            setTimeout(()=> {
+              formMess.innerHTML ="";
+            }, 2500);
+          },
+          (error) => {
+            console.log(error.text);
+            formMess.innerHTML = "<p class='error'>Une erreur s'est produite, veuillez réessayer</p>";
+            setTimeout(()=> {
+              formMess.innerHTML ="";
+            }, 2500);
+          }
+        );
+    };
+  
     return (
-        <div>
-            <h1>hello</h1>
+      <div className="form-container">
+
+        <h2>Contactez-moi</h2>
+        <form ref={form} onSubmit={sendEmail} className="form-content">
+  
+          <label>Nom</label>
+          <input type="text" name="name" required autoComplete="off"  id='name'/>
+          <label >Email</label>
+          <input type="email" name="email" required autoComplete="off" id="email"/>
+          <label >Message</label>
+          <textarea name="message" required id="mess"/>
+          <input type="submit" value="Envoyer" className='hover button'/>
+  
+        <div className="form-message">
+  
         </div>
+        </form>
+  
+      </div>
     );
-};
+  };
 
 export default FormContact;

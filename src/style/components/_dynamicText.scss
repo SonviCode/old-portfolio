@@ -1,40 +1,34 @@
-.dynamic-text {
-  position: relative;
-  display: flex;
+.container-dynamic-text{
+    width: 246px;
+    overflow: hidden;
+    background: red;
+}
+.container-dynamic-text .text{
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+}
 
-  #text-target {
-    display: flex;
-    width: 300px;
-    text-align: left;
-    animation: color 30s alternate infinite;
-    perspective: 200px;
-    transform: translateX(26px);
-  }
-  .word {
+.text-target {
+    color: $blue-light;
+}
+
+.text.text-target:before{
+    content: "";
     position: absolute;
-  }
-  @keyframes color {
-    0% {
-      color: blue;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $white;
+    border-left: 2px solid #4070F4;
+    animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+    40%, 60%{
+        left: calc(100% + 4px);
     }
-    50% {
-      color: #ec006e;
+    100%{
+        left: 0%;
     }
-    100% {
-      color: blue;
-    }
-  }
-  .letter {
-    transform: translateZ(200px);
-  }
-  @keyframes anim {
-    25% {
-      transform: translateZ(0px);
-      opacity: 1;
-    }
-    32% {
-      opacity: 0;
-      transform: translateZ(-280px) translateX(200px);
-    }
-  }
 }
