@@ -1,10 +1,21 @@
 .navigation {
-  position: absolute;
+  position: fixed;
   top: 1rem;
   left: 1.4rem;
   font-size: 1.4rem;
   line-height: 28px;
   color: $color-4;
+
+  @include sm {
+    bottom: 30px;
+    top: auto;
+    left: 50%;
+    width: 80%;
+    padding: 20px;
+    border-radius: 5px;
+    background: $color-3;
+    transform: translateX(-50%);
+  }
 
   &:before {
     content: '';
@@ -15,8 +26,12 @@
     background: $color-3;
     top: -150px;
     left: -200px;
-    z-index: -1;
+    z-index: -10;
     animation: navAnim 20s infinite alternate;
+
+    @include sm {
+      display: none;
+    }
 
     @keyframes navAnim {
       50% {
@@ -25,10 +40,6 @@
       100% {
         transform: scale(1);
       }
-    }
-    @media screen and (max-width: 430px){
-      height: 50px;
-      width: 50px;
     }
   }
   .nav-active {
@@ -47,6 +58,29 @@
     &:hover li:hover {
       color: $black;
     }
+
+    @include sm {
+      flex-direction: row;
+      gap: 30px;
+      justify-content: space-around;
+    }
+
+    span {
+      
+      @include sm {
+        display: none;
+      }
+    }
+
+    i {
+      display: none;
+      font-size: 30px;
+
+      @include sm {
+        display: flex;
+      }
+    }
+
   }
 
   // .nav-portfolio {

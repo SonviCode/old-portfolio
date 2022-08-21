@@ -16,10 +16,8 @@
     z-index: -2;
     animation: homeAnim 26s infinite alternate;
 
-    @media screen and (max-width: 650px){
-      height: 400px;
-      width: 400px;
-      bottom: -270px;
+    @include sm {
+      display: none;
     }
 
     @keyframes homeAnim {
@@ -90,7 +88,6 @@
         font-size: clamp(20px, 3vw, 30px);
         font-weight: 100;
         cursor: grab;
-        width: fit-content;
         margin-bottom: 30px;
        
 

@@ -6,16 +6,16 @@ const Navigation = () => {
         <nav className='navigation'>
             <ul>
                 <NavLink to="/" className={(nav) => (nav.isActive) ? "nav-active hover" : "hover"}>
-                    <li>Accueil</li>
+                    <li><span>Accueil</span><i className="fa-solid fa-house"></i></li>
                 </NavLink>
                 <NavLink to="/about" className={(nav) => (nav.isActive) ? "nav-active hover" : "hover"}>
-                    <li>À propos</li>
+                    <li><span>À propos</span><i className="fa-solid fa-address-card"></i></li>
                 </NavLink>
                 <NavLink to="/projet" className={(nav) => (nav.isActive) ? "nav-active hover" : "hover"}>
-                    <li>Projet</li>
+                    <li><span>Projets</span><i className="fa-solid fa-chart-line"></i></li>
                 </NavLink>
                 <NavLink to="/contact" className={(nav) => (nav.isActive) ? "nav-active hover" : "hover"}>
-                    <li>Contact</li>
+                    <li><span>Contact</span><i className="fa-solid fa-envelope"></i></li>
                 </NavLink>
             </ul>
             

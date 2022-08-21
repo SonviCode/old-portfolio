@@ -1,8 +1,13 @@
 .container-dynamic-text{
-    width: 246px;
     overflow: hidden;
-    background: red;
+
+    @media screen and (max-width: 845px){
+        display: flex;
+        flex-direction: column;
+      }
 }
+
+
 .container-dynamic-text .text{
     position: relative;
     font-size: 30px;
@@ -11,6 +16,7 @@
 
 .text-target {
     color: $blue-light;
+    width: fit-content;
 }
 
 .text.text-target:before{

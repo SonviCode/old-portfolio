@@ -51,7 +51,7 @@ const SocialNetworks = () => {
           onMouseOver={anim}
         >
           <li>
-            <i className="fa-solid fa-envelope"></i>
+          <i className="fa-solid fa-at"></i>
           </li>
         </a>
       </ul>
