@@ -22,4 +22,8 @@
   .right {
     right: -24px;
   }
+
+  @include sm {
+    display: none;
+}
 }

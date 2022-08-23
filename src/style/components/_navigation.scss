@@ -5,6 +5,7 @@
   font-size: 1.4rem;
   line-height: 28px;
   color: $color-4;
+  
 
   @include sm {
     bottom: 30px;
@@ -13,8 +14,10 @@
     width: 80%;
     padding: 20px;
     border-radius: 5px;
+    box-shadow: 5px 10px 14px -5px rgba(173,168,173,1);
     background: $color-3;
     transform: translateX(-50%);
+    z-index: 100;
   }
 
   &:before {

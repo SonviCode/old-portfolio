@@ -54,7 +54,7 @@ const About = () => {
         <div className="about-container">
           <div className="about-title">
             <h2>Qui suis-je ?</h2>
-            <img src={tete} alt="tête de tom" className="hover"/>
+            <img src={tete} alt="tête de tom" className="hover" />
           </div>
           <div className="presentation">
             <div className="texte-presentation">
@@ -72,15 +72,20 @@ const About = () => {
                 à la 3W Academy et en alternance.
               </p>
             </div>
-            <div className="stack-presentation">
-              <img src={html} alt="html" />
-              <img src={css} alt="css" />
-              <img src={mysql} alt="mysql" />
-              <img src={sass} alt="sass" />
-              <img src={git} alt="git" />
-              <img src={js} alt="js" />
-              <img src={react} alt="react" />
-              <img src={nodejs} alt="nodejs" />
+            <div className="skills-presentation">
+              <div className="skills">
+                <h2>Mes skills :</h2>
+              </div>
+              <div className="stack-presentation">
+                <img src={html} alt="html" />
+                <img src={css} alt="css" />
+                <img src={mysql} alt="mysql" />
+                <img src={sass} alt="sass" />
+                <img src={git} alt="git" />
+                <img src={js} alt="js" />
+                <img src={react} alt="react" />
+                <img src={nodejs} alt="nodejs" />
+              </div>
             </div>
           </div>
         </div>

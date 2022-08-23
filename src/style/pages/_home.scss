@@ -2,23 +2,19 @@
   height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 
   &:after {
-    content: '';
-    height: 800px;
-    width: 800px;
+    content: "";
+    height: 600px;
+    width: 600px;
     background: $color-3;
     border-radius: 50%;
     position: absolute;
-    bottom: -480px;
-    right: 0px;
+    top: -300px;
+    right: -300px;
     z-index: -2;
     animation: homeAnim 26s infinite alternate;
-
-    @include sm {
-      display: none;
-    }
 
     @keyframes homeAnim {
       50% {
@@ -28,85 +24,67 @@
         transform: scale(1.1);
       }
     }
-    @media screen and (max-width: 430px){
-      display: none;
-    }
   }
 
-  // .home-main {
-  //   display: grid;
-  //   align-items: center;
-  //   justify-items: center;
-  //   height: 95%;
-  //   background: red;
+  .main-content {
+    user-select: none;
 
-    .main-content {
-      user-select: none;
-      
-      padding: 200px 150px 200px 20%;
-      
-      @include md {
-        padding: 200px 10%;
+    padding: 200px 150px 200px 20%;
+
+    @include md {
+      padding: 200px 10%;
     }
 
-      h1 {
-        font-size: clamp(45px, 6vw, 70px);
-        font-family: $font-1;
-        cursor: grab;
-        position: relative;
-        width: fit-content;
-        
-  
-        &:before {
-          content: '';
-          position: absolute;
-          height: 225px;
-          width: 225px;
-          border-radius: 50%;
-          border: 1px $blue-light solid;
-          top: -40px;
-          left: -180px;
-          z-index: -1;
-          animation: h1Anim 1.5s forwards ease;
-          transform: scale(0);
+    h1 {
+      font-size: clamp(45px, 6vw, 70px);
+      font-family: $font-1;
+      position: relative;
+      width: fit-content;
 
-          @media screen and (max-width: 850px){
-            height: 110px;
-            width: 110px;
-            left: -40px;
-            top: -15px;
-          }
+      &:before {
+        content: "";
+        position: absolute;
+        height: 225px;
+        width: 225px;
+        border-radius: 50%;
+        border: 1px $blue-light solid;
+        top: -40px;
+        left: -180px;
+        z-index: -1;
+        animation: h1Anim 1.5s forwards ease;
+        transform: scale(0);
 
-          @keyframes h1Anim {
-            to {
-              transform: scale(1);
-            }
+        @media screen and (max-width: 850px) {
+          height: 110px;
+          width: 110px;
+          left: -40px;
+          top: -15px;
+        }
+
+        @keyframes h1Anim {
+          to {
+            transform: scale(1);
           }
         }
       }
-      h2 {
-        font-size: clamp(20px, 3vw, 30px);
-        font-weight: 100;
-        cursor: grab;
-        margin-bottom: 30px;
-       
+    }
+    h2 {
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 100;
+      margin-bottom: 30px;
+    }
 
-        
+    a {
+      color: $black;
+      padding: 10px 15px;
+      border: 2px solid $black;
+      width: max-content;
+
+      &:hover {
+        background-color: $black;
+        color: $white;
+        transition: 0.3s ease-in;
       }
-
-      a {
-        color: $black;
-        padding: 10px 15px;
-        border: 2px solid $black;
-        
-        width: max-content;
-
-        &:hover {
-            background-color: $black;
-            color: $white;
-            transition: 0.3s ease-in;
-        }
     }
-    }
-  // }
+  }
 }
