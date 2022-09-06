@@ -3,11 +3,15 @@ export const projectsData = [
     id: 1,
     title: "Manage Landing Page",
     date: "Aout 2022",
-    languages: ["HTML", "Sass", "Javascript"],
+    languages1: "./assets/img/html.png",
+    languages2: "./assets/img/css.png",
+    languages3: "./assets/img/js.png",
+  
     infos:
       "Site réalisé à partir d'une maquette PNG, reçu grâce à FrontEnd Mentor. Codé entièrement en vanilla (sans framework). utilisation de GSAP et de Swiper.JS",
     img: "./assets/img/manage-preview.jpg",
-    link: "http://www.google.com",
+    website: "http://www.google.com",
+    github : "https://github.com/SonviCode/Landing-page-Manage",
   },
   {
     id: 2,

@@ -8,6 +8,7 @@ import js from "../assets/img/js.png";
 import tete from "../assets/img/photoTete.jpg";
 import react from "../assets/img/React-icon.png";
 import nodejs from "../assets/img/nodejs.png";
+import figma from "../assets/img/figma.webp"
 import Mouse from "../components/Mouse";
 import ButtonsNav from "../components/ButtonsNav";
 import Logo from "../components/Logo";
@@ -85,6 +86,7 @@ const About = () => {
                 <img src={js} alt="js" />
                 <img src={react} alt="react" />
                 <img src={nodejs} alt="nodejs" />
+                <img src={figma} alt="figma" />
               </div>
             </div>
           </div>

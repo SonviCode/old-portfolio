@@ -1,33 +1,10 @@
-.footer {
-  overflow-x: hidden;
-}
+
 
 .contact {
   width: 100vw;
   overflow-x: hidden;
   position: relative;
 
-  &:after {
-    content: "";
-    height: 600px;
-    width: 600px;
-    background: $color-3;
-    border-radius: 50%;
-    position: absolute;
-    top: 0px;
-    right: -460px;
-    z-index: -10;
-    animation: contactAnim 25s alternate infinite;
-
-    @keyframes contactAnim {
-      50% {
-        transform: scale(1.4);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  }
 
   .contact-container {
     display: grid;
@@ -36,6 +13,28 @@
     width: 100%;
     align-items: center;
     justify-items: center;
+
+    &:after {
+      content: "";
+      height: 600px;
+      width: 600px;
+      background: $color-3;
+      border-radius: 50%;
+      position: absolute;
+      top: 0px;
+      right: -460px;
+      z-index: -10;
+      animation: contactAnim 25s alternate infinite;
+  
+      @keyframes contactAnim {
+        50% {
+          transform: scale(1.4);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
   }
 
   // LOGO
@@ -155,9 +154,12 @@
 }
 
 .credits {
-  text-align: center;
+  padding: 0 10% 20px;
+  display: flex;
+  justify-content: space-around;
+  gap: 0 50px;
+  flex-wrap: wrap;
   margin-top: 50px;
-  padding-bottom: 20px;
   
   @include sm {
     padding-bottom: 120px;

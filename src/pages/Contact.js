@@ -77,7 +77,8 @@ const Contact = () => {
           </div>
         </div>
         <div className="credits">
-          <p>Tom Sonvico - 2022</p>
+          <p>© Website Professional created by Tom Sonvico - 2022</p>
+          <p>Realized with React and Sass</p>
         </div>
       </motion.div>
     </footer>
